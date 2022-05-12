@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import Header from './components/Header';
+import Balance from './components/Balance';
 
 export default function App() {
   const [expenses, setExpenses] = useState([
@@ -17,9 +18,11 @@ export default function App() {
   ]);
 
   return (
-    <div>
+    <main>
       <Header />
-      <div className="container"></div>
-    </div>
+      <div className="container">
+        <Balance expenses={expenses} />
+      </div>
+    </main>
   );
 }
