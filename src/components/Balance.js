@@ -2,10 +2,10 @@ import React from 'react';
 import { formatToBRL } from 'brazilian-values';
 
 export default function Balance(props) {
-  const { expenses } = props;
+  const { transactions } = props;
 
-  const total = expenses
-    .map((expense) => expense.value)
+  const total = transactions
+    .map((transaction) => transaction.value)
     .reduce((acc, item) => (acc += item), 0);
 
   return (
